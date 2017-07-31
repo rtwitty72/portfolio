@@ -1,0 +1,135 @@
+body{
+    background-color: lavender;
+}
+
+header{
+    color: white;
+    margin-top: 0;
+    display: flex;
+    height: 70px;
+    background-color: navy;
+
+
+}
+
+nav{
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
+}
+
+nav a{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+}
+
+nav a:hover{
+    color: pink;
+}
+
+.banner{
+    background-color: lavender;
+    color: navy;
+    height: 50%;
+}
+
+.profilepic{
+    margin-left: 40%;
+    margin-top: 4%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 250px;
+    height: 250px;
+    border-style: solid;
+    border-radius: 150px 150px 150px 150px;
+}
+
+h2{
+    font-family: cursive, sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+p{
+    font-size: 20px;
+    margin: 5%;
+}
+
+.container-fluid {
+    background-color: white;
+    border-top: solid gray;
+    border-bottom: solid gray;
+    height: auto;
+}
+
+#portfolio{
+    display: flex;
+    margin-left: 70px;
+}
+
+ul{
+    display: flex;
+    justify-content: center;
+}
+
+li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 25px;
+    margin: 20px;
+    width: 250px;
+    height: 250px;
+    border: solid gray;
+    margin-left: 50px;
+}
+
+.portfolio1{
+    background-repeat: no-repeat;
+}
+
+.portfolio2{
+
+}
+
+.portfolio3{
+
+}
+
+
+form{
+    display: inline-flex;
+    width: 70%;
+    font-size: 40px;
+    height: 90%;
+    margin-left: 20%;
+    margin-bottom: 25px;
+    align-items: center;
+}
+
+input{
+    font-size: 20px;
+}
+
+footer{
+    height: 60px;
+    background-color: navy;
+    display: flex;
+    color: white;
+}
+
+
+footer img{
+    color: white;
+    height: 30px;
+    width: auto;
+
+}
+
+
+i{
+    color: white;
+    background-color: white;
+}
