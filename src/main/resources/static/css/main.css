@@ -1,21 +1,28 @@
 body{
+    background: url("../pc-code.jpg") no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
     background-color: lavender;
 }
 
 header{
     color: white;
-    margin-top: 0;
-    display: flex;
+    margin-top: 0px;
+    display: inline-flex;
     height: 70px;
     background-color: navy;
-
+    position: fixed;
+    z-index: 2;
+    width:100%;
 
 }
 
 nav{
+    margin-top: 0px;
     align-items: flex-end;
     justify-content: center;
     padding: 20px;
+    width:100%;
 }
 
 nav a{
@@ -31,14 +38,16 @@ nav a:hover{
 }
 
 .banner{
-    background-color: lavender;
-    color: navy;
-    height: 50%;
+    background-image: url("../pc-code.jpg");
+    height:40%;
+    color:
+    height 50%;
 }
 
 .profilepic{
+    background-image: url("../20170622_TIY-Headshots_03733.jpg");
     margin-left: 40%;
-    margin-top: 4%;
+    margin-top: 25%;
     background-repeat: no-repeat;
     background-size: contain;
     width: 250px;
@@ -63,6 +72,7 @@ p{
     border-top: solid gray;
     border-bottom: solid gray;
     height: auto;
+    margin-bottom:20px;
 }
 
 #portfolio{

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
     <title>Portfolio</title>
-    <link rel="stylesheet" href="./static/css/main.css">
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
 </head>
 <body>
 <header>
@@ -14,18 +14,29 @@
     </nav>
 </header>
 <div class="container"></div>
-<div class="wrapper"></div>
-<img src="../main/resources/static/20170622_TIY-Headshots_03733.jpg" alt="">
+<!--<div class="wrapper"></div>-->
+<img class="profilepic" src="" alt=""/>
 <h2>Rhonda Twitty</h2>
-<p class="About_Me">I am from Spartanburg, SC.  I am currently attending The Iron Yard's Greenville campus.  Computers have always been of interest to me, so I decided to give coding a try.  Many things about coding are intriguing.  Working on the front-end, while it has it's cons (CSS), provided me with valuable knowledge that I can take with me and improve upon.  Back-End allowed me to take a deeper dive into coding.  SQL, Mongo, Node were all new and very challenging.  Most certainly you can count on TIY to keep you on your toes.  Just when I had Atom under control .... along came IntelliJ.  More new and fascinating things to conquer.</p>
+<p class="About_Me">I am from Spartanburg, SC.  I am currently attending The Iron Yard's Greenville, SC campus.  Computers have always been of interest to me, so I decided to give coding a try.  Many things about coding are intriguing.  Working on the front-end, while it has it's cons (CSS), provided me with valuable knowledge that I can take with me and improve upon.  Back-End allowed me to take a deeper dive into coding.  SQL, Mongo, Node were all new and very challenging.  Most certainly you can count on TIY to keep you on your toes.  Just when I had Atom under control .... along came IntelliJ.  More new and fascinating things to conquer.</p>
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-4" id=portfolio>
+        <div class="col-md-4" id="portfolio">
+            <!--<form action="/" method="post">-->
+                <!--<li th:each="topic : ${topics}">-->
+                    <!--<span th:text="${topic.title}"></span>-->
+                    <!--:-->
+                    <!--<span th:text="${topic.description}"></span>-->
+                    <!--<input type="hidden" th:value="${topic.id}" name="id"/>-->
+                    <!--<form action="/deleteTopic" method="post"></form>-->
+                    <!--<input type="submit" value="X"/>-->
+                <!--</li>-->
+            <!--</form>-->
             <ul>
-                <li class="portfolio1"src="./20170622_TIY-Headshots_03733.jpg" alt="project 1"></li>
-                <li class="portfolio2"src="./20170622_TIY-Headshots_03733.jpg" alt="project 1"></li>
-                <li class="portfolio3"src="./20170622_TIY-Headshots_03733.jpg" alt="project 3"></li>
+
+                <li class="portfolio1" src="" alt="project 1"></li>
+                <li class="portfolio2" src="" alt="project 2"></li>
+                <li class="portfolio3" src="" alt="project 3"></li>
             </ul>
         </div>
     </div>
@@ -36,11 +47,11 @@
     <form>
         <fieldset>
             <h2>Contact Me</h2>
-            <input type="text" name="firstname" value="First Name">
-            <input type="email" name="email" value="Email">
-            <input type="phone" name="phone" value="Phone">
+            <input type="text" name="firstname" value="First Name"/>
+            <input type="email" name="email" value="Email"/>
+            <input type="phone" name="phone" value="Phone"/>
 
-            <input type="submit" name="" value="Submit">
+            <input type="submit" name="" value="Submit"/>
         </fieldset>
     </form>
 </div>
