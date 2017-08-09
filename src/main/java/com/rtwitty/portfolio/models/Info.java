@@ -1,12 +1,12 @@
 package com.rtwitty.portfolio.models;
 
-public class Topic {
+public class Info {
 
     private long id;
     private String title;
     private String description;
 
-    public Topic(long id, String title, String description) {
+    public Info(long id, String title, String description) {
         this.id = id;
         this.title = title;
         this.description = description;

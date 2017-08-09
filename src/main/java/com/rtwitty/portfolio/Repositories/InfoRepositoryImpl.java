@@ -1,7 +1,7 @@
 package com.rtwitty.portfolio.Repositories;
 
-import com.rtwitty.portfolio.interfaces.TopicRepository;
-import com.rtwitty.portfolio.models.Topic;
+import com.rtwitty.portfolio.interfaces.InfoRepository;
+import com.rtwitty.portfolio.models.Info;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -12,14 +12,14 @@ import java.sql.SQLException;
 import java.util.List;
 
 @Repository
-public class TopicRepositoryImpl implements TopicRepository{
+public class InfoRepositoryImpl implements InfoRepository {
 
     @Autowired
     JdbcTemplate jdbcTemplate;
 
     @Override
-    public List<Topic> findAll() {
-        return jdbcTemplate.query("SELECT * FROM portfolios", new TopicMapper());
+    public List<Info> findAll() {
+        return jdbcTemplate.query("SELECT * FROM portfolios", new InfoMapper());
 
     }
 
@@ -30,18 +30,17 @@ public class TopicRepositoryImpl implements TopicRepository{
     }
 
     @Override
-    public void delete(long id){
-        jdbcTemplate.update("DELETE FROM portfolios WHERE id = ?", id);
+    public void delete(long id){ jdbcTemplate.update("DELETE FROM portfolios WHERE id = ?", id);
     }
 
-    private static class TopicMapper implements RowMapper<Topic>{
+    private static class InfoMapper implements RowMapper<Info>{
 
         @Override
-        public Topic mapRow(ResultSet resultSet, int i) throws SQLException{
-            Topic topic = new Topic(resultSet.getInt("id"),
+        public Info mapRow(ResultSet resultSet, int i) throws SQLException{
+            Info info = new Info(resultSet.getInt("id"),
                                     resultSet.getString("title"),
                                     resultSet.getString("description"));
-            return topic;
+            return info;
         }
 
     }

@@ -1,12 +1,12 @@
 package com.rtwitty.portfolio.interfaces;
 
-import com.rtwitty.portfolio.models.Topic;
+import com.rtwitty.portfolio.models.Info;
 
 import java.util.List;
 
 
-public interface TopicRepository {
-    List<Topic> findAll();
+public interface InfoRepository {
+    List<Info> findAll();
     void add(String title, String description);
     void delete(long id);
     }

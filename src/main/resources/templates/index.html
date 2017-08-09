@@ -3,51 +3,64 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Portfolio</title>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/3.2.0/css/bootstrap.min.css}"/>
     <link rel="stylesheet" th:href="@{/css/main.css}"/>
 </head>
 <body>
 <header>
     <nav>
-        <a href="./portfolio">PORTFOLIO</a>
-        <a href="./about">ABOUT</a>
-        <a href="./contact">CONTACT</a>
+        <a href="#portfolio">PORTFOLIO</a>
+        <a href="#about">ABOUT</a>
+        <a href="#contact">CONTACT</a>
     </nav>
 </header>
-<div class="container"></div>
-<!--<div class="wrapper"></div>-->
-<img class="profilepic" src="" alt=""/>
-<h2>Rhonda Twitty</h2>
+
+<div class="banner">
+    <img  class="profilepic" alt="" /></div>
+
+<h2 id="about">Rhonda Twitty</h2>
+
 <p class="About_Me">I am from Spartanburg, SC.  I am currently attending The Iron Yard's Greenville, SC campus.  Computers have always been of interest to me, so I decided to give coding a try.  Many things about coding are intriguing.  Working on the front-end, while it has it's cons (CSS), provided me with valuable knowledge that I can take with me and improve upon.  Back-End allowed me to take a deeper dive into coding.  SQL, Mongo, Node were all new and very challenging.  Most certainly you can count on TIY to keep you on your toes.  Just when I had Atom under control .... along came IntelliJ.  More new and fascinating things to conquer.</p>
+
+
 
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-4" id="portfolio">
-            <!--<form action="/" method="post">-->
-                <!--<li th:each="topic : ${topics}">-->
-                    <!--<span th:text="${topic.title}"></span>-->
-                    <!--:-->
-                    <!--<span th:text="${topic.description}"></span>-->
-                    <!--<input type="hidden" th:value="${topic.id}" name="id"/>-->
-                    <!--<form action="/deleteTopic" method="post"></form>-->
-                    <!--<input type="submit" value="X"/>-->
-                <!--</li>-->
-            <!--</form>-->
             <ul>
-
-                <li class="portfolio1" src="" alt="project 1"></li>
-                <li class="portfolio2" src="" alt="project 2"></li>
-                <li class="portfolio3" src="" alt="project 3"></li>
+                <li class="portfolio1" src="" alt="project 1"> <div class="card-container">
+                    <div class="card">
+                        <div class="side"><img src="file:///Users/macbookpro/Documents/project/week-one-project/index.html" alt="Bent Creek Ceramics"/></div>
+                        <div class="side back">Bear Creek Ceramics</div>
+                    </div>
+                </div>
+                Completed 2017 using HTML and CSS</li>
+                <li class="portfolio2" src="" alt="project 2"><div class="card-container">
+                    <div class="card">
+                        <div class="side"><img src="file:///Users/macbookpro/Documents/project/week-one-project/index.html" alt="Project 2"/></div>
+                        <div class="side back">Project 2</div>
+                    </div>
+                </div>Completed Summer 2017 using Node, HTML, Javascript</li>
+                <li class="portfolio3" src="" alt="project 3"><div class="card-container">
+                    <div class="card">
+                        <div class="side"><img src="file:///Users/macbookpro/Documents/project/week-one-project/index.html" alt="Project 3"/></div>
+                        <div class="side back">Project 3</div>
+                    </div>
+                </div>Completed Summer 2017</li>
             </ul>
         </div>
     </div>
 </div>
 
 
+
+
 <div class="contact-me">
+    <p>Feel free to contact me via <a href="mailto:rhondatwitty@gmail.com">email</a> or you may leave your information below.</p>
     <form>
         <fieldset>
-            <h2>Contact Me</h2>
-            <input type="text" name="firstname" value="First Name"/>
+            <h2 id="contact">Contact Me</h2>
+            <input type="text" name="name" value="Name"/>
             <input type="email" name="email" value="Email"/>
             <input type="phone" name="phone" value="Phone"/>
 
@@ -56,13 +69,12 @@
     </form>
 </div>
 
-
+<script th:src="@{/webjars/bootstrap/css/3.2.0/bootstrap.min.css}"></script>
 </body>
 <footer>
-    <i class="fa fa-github fa-lg" aria-hidden="true"></i>
-    <i class="fa fa-linkedin fa-lg" aria-hidden="true"></i>
-    Rhonda Twitty Copyright (c) 2017
-
+    <i class="fa fa-github fa-md" aria-hidden="true"></i>
+    <i class="fa fa-linkedin fa-md" aria-hidden="true"></i>
+    <legal>Rhonda Twitty Copyright (c) 2017-2017</legal>
 
 </footer>
 
